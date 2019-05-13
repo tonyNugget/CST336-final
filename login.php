@@ -53,8 +53,7 @@
       $dbConn = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
       $dbConn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); 
 
-      $sql = "SELECT * FROM user " .
-             "WHERE email = :email ";
+      $sql = "SELECT * FROM user WHERE email = :email ";
       
       $stmt = $dbConn->prepare($sql);
       $stmt->execute(array (":email" => $_POST['email']));
