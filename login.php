@@ -62,10 +62,10 @@
       
       $isAuthenticated = password_verify($_POST["password"], $record["password"]);
         
-      if ($isAuthenticated) {
+      //if ($isAuthenticated) {
         $_SESSION["email"] = $record["email"];
         $_SESSION["user_id"] = $record["id"];
-      }
+      //}
       
       // Allow any client to access
       header("Access-Control-Allow-Origin: *");
