@@ -71,21 +71,34 @@
   
        //when connecting from Heroku
 
+    // if  (strpos($_SERVER['HTTP_HOST'], 'herokuapp') !== false) {
+
+    //     $url = parse_url(getenv("CLEARDB_DATABASE_URL"));
+
+    //     $host = $url["host"];
+
+    //     $dbname = substr($url["path"], 1);
+
+    //     $username = $url["user"];
+
+    //     $password = $url["pass"];
+
+    // } 
+    
+  
     if  (strpos($_SERVER['HTTP_HOST'], 'herokuapp') !== false) {
 
         $url = parse_url(getenv("CLEARDB_DATABASE_URL"));
 
-        $host = $url["host"];
+        $host ='ui0tj7jn8pyv9lp6.cbetxkdyhwsb.us-east-1.rds.amazonaws.com';
 
-        $dbname = substr($url["path"], 1);
+        $dbname = 'n2lrk63jbpccdyat';
 
-        $username = $url["user"];
+        $username = 'mzhz3aapyh68m2tg';
 
-        $password = $url["pass"];
+        $password = 'i6s6qd32i24wjayd';
 
     } 
-    
-  
   
       // Get Data from DB
       try {
