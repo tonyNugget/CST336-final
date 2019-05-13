@@ -48,7 +48,7 @@
     } 
     
       
-  
+  try{
       // Get Data from DB
       $dbConn = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
       $dbConn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); 
@@ -74,6 +74,13 @@
 
       // Sending back down as JSON
       echo json_encode(array("isAuthenticated" => $isAuthenticated));
+
+        } catch (PDOException $e) {
+          echo json_encode(array(
+            "success" => false,
+            "message" => $e->getMessage()));
+        }
+
 
       break;
     case 'PUT':
