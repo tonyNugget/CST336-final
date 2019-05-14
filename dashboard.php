@@ -19,6 +19,7 @@
                 <button onclick="window.location.href='rubric.html'" class='btn btn-warning'>Grading Rubric</button>
                 <button href="#myModal" data-toggle='modal' onclick='modal(2)' class='btn btn-warning'>Picture of ERD Diagram</button>
                 <button onclick="window.location.href='https://zerka-final.herokuapp.com/login.html'" class='btn btn-warning'>Link To Heroku App</button>
+                <button onclick="window.location.href='https://github.com/tonyNugget/CST336-final'" class='btn btn-warning'>Link To Github repository</button>
 
                 <!--logout Button-->
                 <button id="logout" class="btn btn-danger">Logout</button>
